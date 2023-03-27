@@ -63,7 +63,7 @@ header div h2{
     font-size: 15px;
     margin: 5px;
 }
-@media(max-width: 800px){
+@media(max-width: 768px){
     .navegador .fa-bars{
         display: flex;
         font-size: 32px;
@@ -99,7 +99,7 @@ header div h2{
     }
 }
 
-@media(max-width:576px){
+@media(max-width:480px){
     .portada h1{
         font-size: 24px;
     }
@@ -256,7 +256,7 @@ h2{
     text-align: center;
 }
 
-@media(max-width: 800px){
+@media(max-width: 768px){
     .navegador .fa-bars{
         display: flex;
         font-size: 32px;
@@ -293,7 +293,7 @@ h2{
     
 }
 
-@media(max-width:576px){
+@media(max-width:480px){
     .portada h1{
         font-size: 24px;
     }
@@ -316,7 +316,7 @@ h2{
     } 
       
 }
-@media(max-width:800px){
+@media(max-width:768px){
     .cuerpo h2{
         font-size: 26px;
     }
@@ -334,7 +334,7 @@ h2{
         justify-content: center;
     }
 }    
-@media(max-width:576px){
+@media(max-width:480px){
     .cuerpo article{
         display: flex;
         flex-direction: column;
