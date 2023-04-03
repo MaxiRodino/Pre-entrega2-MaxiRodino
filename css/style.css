@@ -12,8 +12,11 @@
 
 /*navegador*/
 header .menu{
+    padding: 3rem;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 20rem;
 }
 .navegador{
     background-color: white; 
@@ -42,7 +45,7 @@ header .menu{
 .navegador ul li a{
     text-decoration: none;
     color: black;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 5px;   
 }
@@ -57,13 +60,30 @@ header .menu{
     font-size: 32px;
     padding-right: 10px;
     font-family: 'Caveat', cursive;
+    padding: 25px 40px;
 }
 header div h2{
     text-align: right;
-    font-size: 15px;
+    font-size: 18px;
     margin: 5px;
 }
+@media(max-width: 1024px){
+    header .menu{
+        padding: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+}
 @media(max-width: 768px){
+    header .menu{
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
     .navegador .fa-bars{
         display: flex;
         font-size: 32px;
@@ -116,11 +136,13 @@ header div h2{
 }
 
 .cuerpo{
-    background-color: rgb(252, 60, 60);
+    background: linear-gradient(rgb(252, 60, 60), 10%, white ) ;
     margin: 0px auto;
     padding: 10px;
     display: flex;
     flex-direction: column;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 .cuerpo article{
     display: flex;
@@ -130,16 +152,16 @@ header div h2{
     
 }
 .tarjeta-contenido p{
-    font-size: 26px;
+    font-size: 20px;
     text-align: justify;
     padding: 5px;
 }
 .cuerpo .img-inicio{
-    width: 300px;
-    height: 300px;
+    width: 370px;
     margin: 15px;
     padding: 10px;
     display: flex;
+    object-fit: cover;
 }
 
 h2{
@@ -185,70 +207,23 @@ h2{
     height: 100px;
 
 }
-.cuerpos{
-    background-color: red;
-}
-.cuerpos img{
-    width: 100px;
-    height: 100px;
-}
 
 /*footer*/
 .pie{
-    background-color: red;
+    background: linear-gradient(white, 80%, rgb(252, 60, 60)) ;
     padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 2fr;
-    grid-template-areas: ".logo-lub .nav .horarios"
-                         ".pie-derechos";
+    display: flex;
+    flex-direction: column;
 }
 
 .pie .lub-logo{
     margin: 20px;
 }
-.pie h4{
-    font-size: 40px;
-    color: white;
-    text-align: justify;
-    text-decoration: double;
-    margin: 10px;
-      
-}
-.pie .horario{
-    margin: 10px;
-    padding: 0;
-    width: 250px;
-    height: 210px;
-}
-.pie .horario .hora{
-    font-size: 16px;
-    text-align: justify;
-    text-decoration: none;
+.pie .pie-contacto{
     list-style: none;
 }
-.pie .dire{
-    font-size: 20px;
-    list-style: none;
-    text-align: center;
-    margin: 10px;
-}
-.pie .nav{
-    list-style: none;
-    display: flex;
-    justify-content: center;  
-}
-.pie .nav .nav-item{
-    list-style: none;
-    margin: 10px;
-    padding: 0;    
-}
-.pie .nav .nav-item .nav-link{
-    text-decoration: none;
-    font-size: 40px;
-    color: white;    
-    padding: 20px;
-        
+.pie .container-fluid .img{
+    width: 300px;
 }
 .pie .pie-derechos p{
     color: white;
@@ -298,7 +273,7 @@ h2{
         font-size: 24px;
     }
     .portada h2{
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 @media(max-width:1024px){
@@ -317,6 +292,12 @@ h2{
       
 }
 @media(max-width:768px){
+    .cuerpo article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
     .cuerpo h2{
         font-size: 26px;
     }
@@ -327,6 +308,8 @@ h2{
         right: 280px;
         height: 280px;
         margin: 5px;
+        object-fit: cover;
+        gap: 5rem;
     }
     .cuerpo .lubri-servi{
         flex-direction: column;
@@ -335,16 +318,11 @@ h2{
     }
 }    
 @media(max-width:480px){
-    .cuerpo article{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
     .cuerpo h2{
         font-size: 22px;
     }
     .cuerpo .tarjeta-contenido p{
-        font-size: 14px;
+        font-size: 16px;
         padding: 5px;
         margin: 5px;
     }
@@ -375,13 +353,13 @@ h2{
         font-size: 20px;
     }
     .pie .horario .hora{
-        font-size: 12px;
+        font-size: 16px;
     }
     .pie .lub-logo{
         width: 150px;
     }
     .pie .dire{
-        font-size: 12px;
+        font-size: 16px;
     }
     .pie .nav .nav-item .nav-link{
         font-size: 16px;
