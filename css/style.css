@@ -221,6 +221,8 @@ h2{
 }
 .pie .pie-contacto{
     list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 .pie .container-fluid .img{
     width: 300px;
