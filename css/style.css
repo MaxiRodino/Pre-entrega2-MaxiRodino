@@ -141,7 +141,6 @@ header div h2{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    max-width: 1500px;
     margin: 0 auto;
 }
 .cuerpo article{
@@ -180,7 +179,7 @@ h2{
 }
 .cuerpo .galeria .galeria-jeep{
     flex-direction: column;
-    width: 500px;
+    width: 80%;
 }
 .cuerpo .galeria .galeria-etios{
     flex-direction: column;
