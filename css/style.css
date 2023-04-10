@@ -1,380 +1,262 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100&family=Tilt+Neon&display=swap');
-.lub-logo{
-    width: 250px;
-    height: 150 px;
-    object-fit: cover
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*navegador*/
-header .menu{
+.menu {
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+.menu .lub-logo {
+  width: 250px;
+  height: 150 px;
+  object-fit: cover;
+}
+.menu .navegador {
+  background-color: White;
+  display: flex;
+  justify-content: end;
+  height: 50px;
+  align-items: end;
+}
+.menu .navegador .fa-bars {
+  display: none;
+  font-size: 32px;
+  margin: 10px;
+  color: red;
+}
+.menu .navegador ul {
+  list-style: none;
+  display: flex;
+  transition: 0.3s;
+}
+.menu .navegador ul li {
+  display: flex;
+  list-style: none;
+  margin-left: 10px;
+  padding: 0;
+}
+.menu .navegador ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 5px;
+}
+
+@media (max-width: 1024px) {
+  .menu {
     padding: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20rem;
+    gap: 4rem;
+  }
 }
-.navegador{
-    background-color: white; 
+@media (max-width: 768px) {
+  .menu {
+    padding: 1rem;
     display: flex;
-    justify-content: end;
-    height: 50px;
-    align-items: end;
-}
-.navegador ul{
-    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .menu .navegador .fa-bars {
     display: flex;
-    transition: 0.3s;
-}
-.navegador ul li{
-    display: flex;
-    list-style: none;
-    margin-left: 10px;
-    padding: 0;
-}
-.navegador .fa-bars{
-    display: none;
     font-size: 32px;
     margin: 10px;
     color: red;
-}
-.navegador ul li a{
-    text-decoration: none;
+    justify-content: start;
+    align-items: end;
+  }
+  .menu .navegador .fa-bars:hover + ul {
+    right: 0;
+  }
+  .menu .navegador ul:hover {
+    right: 0;
+  }
+  .menu .navegador ul {
+    right: -350px;
+    top: 0;
+    position: fixed;
+    background-color: white;
+    width: 250px;
+    height: 100vh;
+    z-index: 5;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 15px;
+  }
+  .menu .navegador ul li a {
     color: black;
-    font-size: 18px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 5px;   
+  }
+  .portada {
+    font-size: 27px;
+  }
 }
-.portada{
-    background-image: url(../multimedia/imagenes/lavado-auto12.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 250px;
-    color: red;
-    text-align: right;
-    text-shadow: 2px 2px 2px white;
-    font-size: 32px;
-    padding-right: 10px;
-    font-family: 'Caveat', cursive;
-    padding: 25px 40px;
+@media (max-width: 480px) {
+  .menu .lub-logo {
+    width: 200px;
+  }
+  .portada h1 {
+    font-size: 24px;
+  }
+  .portada h2 {
+    font-size: 16px;
+  }
 }
-header div h2{
-    text-align: right;
-    font-size: 18px;
-    margin: 5px;
+.portada {
+  background-image: url(../multimedia/imagenes/lavado-auto12.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  color: red;
+  text-align: right;
+  padding: 25px 40px;
+  text-shadow: 2px 2px 2px white;
 }
-@media(max-width: 1024px){
-    header .menu{
-        padding: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 4rem;
-    }
+.portada h1 {
+  font-size: 32px;
+  padding-right: 10px;
+  font-family: "Caveat";
 }
-@media(max-width: 768px){
-    header .menu{
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-    }
-    .navegador .fa-bars{
-        display: flex;
-        font-size: 32px;
-        margin: 10px;
-        color: red;
-        justify-content: start;
-        align-items: end;
-    }
-    .navegador .fa-bars:hover + ul{
-        right: 0;
-    }
-    .navegador ul:hover{
-        right: 0;
-    }
-    .navegador ul{
-        right: -350px;
-        top: 0;
-        position: fixed;
-        background-color: white;
-        width: 250px;
-        height: 100vh;
-        z-index: 5;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        padding-top: 15px;
-    }
-    .navegador ul li a{
-        color: black;
-    }
-    .portada{
-        font-size: 27px;
-    }
+.portada h2 {
+  text-align: right;
+  font-size: 18px;
+  margin: 5px;
 }
 
-@media(max-width:480px){
-    .portada h1{
-        font-size: 24px;
-    }
-    .portada h2{
-        font-size: 16px;
-    }
+.cuerpo {
+  background: linear-gradient(rgb(252, 60, 60), 10%, white);
+  margin: 0px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
-/*main*/
-
-
-.titulo{    
-    text-align: center;
-    font-size: 40px;
+.cuerpo .tarjeta-inicio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cuerpo .tarjeta-inicio .img-inicio {
+  width: 370px;
+  height: 370px;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  object-fit: cover;
+}
+.cuerpo .tarjeta-inicio p {
+  font-size: 20px;
+  text-align: justify;
+  padding: 5px;
+}
+.cuerpo .redes-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
-.cuerpo{
-    background: linear-gradient(rgb(252, 60, 60), 10%, white ) ;
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, sans-serif;
+  margin: 15px;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .cuerpo {
+    background: linear-gradient(rgb(252, 60, 60), 10%, white);
     margin: 0px auto;
     padding: 10px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+  }
+  .cuerpo .tarjeta-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cuerpo .tarjeta-inicio .img-inicio {
+    width: 280px;
+    height: 280px;
+    margin: 5px;
+    object-fit: cover;
+  }
+  .cuerpo .tarjeta-contenido h2 {
+    font-size: 24px;
+  }
+  .cuerpo .tarjeta-contenido p {
+    font-size: 16px;
+  }
+  .cuerpo h2 {
+    font-size: 28px;
+  }
+  .cuerpo iframe {
+    width: 95%;
+    height: 95%;
+  }
 }
-.cuerpo article{
+.pie {
+  background: linear-gradient(rgb(252, 60, 60), 10%, white);
+  padding: 10px;
+}
+.pie .container-fluid .img {
+  width: 300px;
+}
+.pie .pie-contacto {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.pie .pie-derechos p {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .pie {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .pie {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pie h4 {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+  }
+  .pie-contacto {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    
+  }
 }
-.tarjeta-contenido p{
-    font-size: 20px;
-    text-align: justify;
-    padding: 5px;
-}
-.cuerpo .img-inicio{
-    width: 370px;
-    margin: 15px;
-    padding: 10px;
-    display: flex;
-    object-fit: cover;
+.cuerpo .tarjeta-inicio h2 {
+  text-align: center;
+  font-size: 32px;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 1px white;
+  margin: 15px;
+  padding: 10px;
 }
 
-h2{
-    text-align: center;
-    font-size: 40px;
-    font-family: Arial, sans-serif;
-    text-shadow: 1px 1px 1px white;
-    margin: 15px;
-    padding: 10px;
-}
-.cuerpo .galeria{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.cuerpo .galeria .galeria-jeep{
-    flex-direction: column;
-    width: 80%;
-}
-.cuerpo .galeria .galeria-etios{
-    flex-direction: column;
-    width: 500px;
-}
-.cuerpo .lubri-servi{
-    display: flex;
-    justify-content: space-between;
-}
-
-.cuerpo .servicios{
-    font-size: 24px;
-    text-align: justify;
-    color: rgb(2, 2, 80);
-}
-.cuerpo .galeria-servicios{
-    width: 550px;
-    margin: 20px;
-    
-}
-
-.cuerpo .redes-logo{
-    width: 100px;
-    height: 100px;
-
-}
-
-/*footer*/
-.pie{
-    background: linear-gradient(white, 80%, rgb(252, 60, 60)) ;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.pie .lub-logo{
-    margin: 20px;
-}
-.pie .pie-contacto{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-}
-.pie .container-fluid .img{
-    width: 300px;
-}
-.pie .pie-derechos p{
-    color: white;
-    font-size: 12px;
-    text-align: center;
-}
-
-@media(max-width: 768px){
-    .navegador .fa-bars{
-        display: flex;
-        font-size: 32px;
-        margin: 10px;
-        color: red;
-        justify-content: start;
-        align-items: end;
-    }
-    .navegador .fa-bars:hover + ul{
-        right: 0;
-    }
-    .navegador ul:hover{
-        right: 0;
-    }
-    .navegador ul{
-        right: -350px;
-        top: 0;
-        position: fixed;
-        background-color: white;
-        width: 250px;
-        height: 100vh;
-        z-index: 5;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        padding-top: 15px;
-    }
-    .navegador ul li a{
-        color: black;
-    }
-    .portada{
-        font-size: 27px;
-    }
-    
-}
-
-@media(max-width:480px){
-    .portada h1{
-        font-size: 24px;
-    }
-    .portada h2{
-        font-size: 18px;
-    }
-}
-@media(max-width:1024px){
-    .cuerpo h2{
-        font-size: 30px;
-    }
-    .cuerpo .tarjeta-contenido p{
-        font-size: 20px;
-    }
-    .pie{
-        padding: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    } 
-      
-}
-@media(max-width:768px){
-    .cuerpo article{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
-    }
-    .cuerpo h2{
-        font-size: 26px;
-    }
-    .cuerpo .tarjeta-contenido p{
-        font-size: 17px;
-    }
-    .cuerpo .img-inicio{
-        right: 280px;
-        height: 280px;
-        margin: 5px;
-        object-fit: cover;
-        gap: 5rem;
-    }
-    .cuerpo .galeria h3{
-        font-size: 16px;
-        text-align: center;
-        margin-top: 15px;
-        justify-content: center;
-        margin: 5px;
-    }
-    .cuerpo .galeria .w-100{
-        width: 270px;
-        height: 270px;
-        object-fit: cover;
-    }
-    .cuerpo .galeria-servicios .w-100{
-        width: 270px;
-        height: 270px;
-        object-fit: cover;
-    }
-    .cuerpo .lubri-servi{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}    
-@media(max-width:480px){
-    .cuerpo h2{
-        font-size: 22px;
-    }
-    .cuerpo .tarjeta-contenido p{
-        font-size: 16px;
-        padding: 5px;
-        margin: 5px;
-    }
-    .cuerpo .img-inicio{
-        padding: 5px;
-        margin: 5px;
-        justify-content: center;
-    }
-    .cuerpo .galeria .w-100{
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-    }
-    .cuerpo .galeria-servicios .w-100{
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-    }
-    .pie{
-        padding: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .pie-contacto{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    .pie h4{
-        display: flex;
-        align-items: center;
-        font-size: 20px;
-    }
-    
-}
-
+/*# sourceMappingURL=style.css.map */
