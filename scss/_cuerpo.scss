@@ -1,16 +1,15 @@
 
 .cuerpo{
     background: $bg-color;
-    margin: 0px auto;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     .tarjeta-inicio{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin-bottom: 2rem;
         .img-inicio{
             width: 370px;
             height: 370px;
