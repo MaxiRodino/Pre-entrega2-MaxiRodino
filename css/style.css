@@ -151,6 +151,13 @@
   display: flex;
   object-fit: cover;
 }
+.cuerpo .tarjeta-inicio h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, sans-serif;
+  margin: 15px;
+  padding: 10px;
+}
 .cuerpo .tarjeta-inicio p {
   font-size: 20px;
   text-align: justify;
@@ -161,15 +168,153 @@
   height: 100px;
   object-fit: contain;
 }
-
-h2 {
-  text-align: center;
-  font-size: 40px;
-  font-family: Arial, sans-serif;
-  margin: 15px;
+.cuerpo .galeria article {
+  width: 800px;
+}
+.cuerpo .lubri-servi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cuerpo .lubri-servi .tarjeta-servicios {
+  display: flex;
+  width: 480px;
+  margin: 5px;
+}
+.cuerpo .lubri-servi .tarjeta-servicios .img-servicios {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 5px;
+  padding: 5px;
+}
+.cuerpo .lubri-servi .tarjeta-servicios .contenido-servicios {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
   padding: 10px;
 }
+.cuerpo .lubri-servi .tarjeta-servicios .contenido-servicios h4 {
+  font-size: 26px;
+}
+.cuerpo .galeria-1 {
+  display: grid;
+  background-color: rgb(151, 148, 148);
+  width: 750px;
+  box-shadow: 1px 1px 7px 2px #000000;
+  margin: 40px auto;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "h3 h3 h3" "img1 img2 img3" "img4 img5 img6" "img7 img8 img9";
+}
+.cuerpo .galeria-1 .img-quien {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 7px;
+  align-items: center;
+  justify-content: center;
+}
+.cuerpo .galeria-1 .h3-quien {
+  grid-area: h3;
+  color: black;
+  padding: 10px;
+}
+.cuerpo .galeria-1 img:nth-child(2) {
+  grid-area: img1;
+}
+.cuerpo .galeria-1 img:nth-child(3) {
+  grid-area: img2;
+}
+.cuerpo .galeria-1 img:nth-child(4) {
+  grid-area: img3;
+}
+.cuerpo .galeria-1 img:nth-child(5) {
+  grid-area: img4;
+}
+.cuerpo .galeria-1 img:nth-child(6) {
+  grid-area: img5;
+}
+.cuerpo .galeria-1 img:nth-child(7) {
+  grid-area: img6;
+}
+.cuerpo .galeria-1 img:nth-child(8) {
+  grid-area: img7;
+}
+.cuerpo .galeria-1 img:nth-child(9) {
+  grid-area: img8;
+}
+.cuerpo .galeria-1 img:nth-child(10) {
+  grid-area: img9;
+}
+.cuerpo .formulario {
+  width: 700px;
+  background-color: white;
+  box-shadow: 1px 1px 7px 2px #000000;
+  margin: 40px auto;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "contactanos contactanos" "nombre      email" "tel         asunto" "mensaje     mensaje" "boton       boton";
+}
+.cuerpo .formulario h2 {
+  grid-area: contactanos;
+  color: black;
+  padding: 10px;
+}
+.cuerpo .formulario label {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  padding: 10px;
+}
+.cuerpo .formulario label input, .cuerpo .formulario label textarea {
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  color: white;
+}
+.cuerpo .formulario label:nth-child(2) {
+  grid-area: nombre;
+}
+.cuerpo .formulario label:nth-child(3) {
+  grid-area: email;
+}
+.cuerpo .formulario label:nth-child(4) {
+  grid-area: tel;
+}
+.cuerpo .formulario label:nth-child(5) {
+  grid-area: asunto;
+}
+.cuerpo .formulario label:nth-child(6) {
+  grid-area: mensaje;
+}
+.cuerpo .formulario button {
+  grid-area: boton;
+  background-color: rgb(245, 63, 63);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+}
 
+@media (max-width: 1024px) {
+  .cuerpo .lubri-servi .tarjeta-servicios {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+  .cuerpo .galeria article {
+    width: 80%;
+  }
+}
 @media (max-width: 768px) {
   .cuerpo {
     background: linear-gradient(rgb(252, 60, 60), 10%, white);
@@ -178,6 +323,8 @@ h2 {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
   }
   .cuerpo .tarjeta-inicio {
     display: flex;
@@ -197,14 +344,78 @@ h2 {
   .cuerpo .tarjeta-contenido p {
     font-size: 16px;
   }
+  .cuerpo .galeria article {
+    width: 85%;
+  }
+  .cuerpo .lubri-servi .tarjeta-servicios {
+    flex-direction: row;
+    width: 450px;
+  }
+  .cuerpo .lubri-servi .tarjeta-servicios .contenido-servicios {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+  }
+  .cuerpo .lubri-servi .tarjeta-servicios .contenido-servicios h4 {
+    font-size: 20px;
+  }
+  .cuerpo .galeria-1 {
+    width: auto;
+    margin: 10px 5px;
+    padding: 5px;
+    border-radius: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "h3 h3" "img1 img2" "img3 img4" "img5 img6" "img7 img8" "img9 img9";
+  }
+  .cuerpo .galeria-1 .img-quien {
+    width: 140px;
+    height: 140px;
+    margin: 5px;
+  }
   .cuerpo h2 {
-    font-size: 28px;
+    font-size: 34px;
+  }
+  .cuerpo .direccion-contacto {
+    flex-direction: column;
   }
   .cuerpo iframe {
     width: 95%;
     height: 95%;
   }
+  .cuerpo .formulario {
+    width: auto;
+    margin: 40px 5px;
+    border-radius: 5px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "contactanos" "nombre" "email" "tel" "asunto" "mensaje" "boton";
+  }
 }
+@media (max-width: 480px) {
+  .cuerpo .lubri-servi .tarjeta-servicios {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+  .cuerpo .galeria article {
+    width: 95%;
+  }
+  .cuerpo .galeria-1 {
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: "h3" "img1" "img2" "img3" "img4" "img5" "img6" "img7" "img8" "img9";
+  }
+}
+.cuerpo .titulo-cuerpo {
+  text-align: center;
+  font-size: 32px;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 1px white;
+  margin: 15px;
+  padding: 10px;
+}
+
 .pie {
   background: linear-gradient(rgb(252, 60, 60), 10%, white);
   padding: 10px;
@@ -248,14 +459,6 @@ h2 {
     flex-direction: row;
     align-items: center;
   }
-}
-.cuerpo .tarjeta-inicio h2 {
-  text-align: center;
-  font-size: 32px;
-  font-family: Arial, sans-serif;
-  text-shadow: 1px 1px 1px white;
-  margin: 15px;
-  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
