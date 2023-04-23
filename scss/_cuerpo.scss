@@ -14,9 +14,7 @@
         align-items: center;
         margin-bottom: 2rem;
         .img-inicio{
-            
-            width: 370px;
-            height: 370px;
+            @include sizes (370px, 370px);
             margin: 15px;
             padding: 10px;
             display: flex;
@@ -36,13 +34,12 @@
         }      
     }
     .redes-logo{
-        width: 100px;
-        height: 100px;
+        @include sizes (100px, 100px);
         object-fit: contain;
     }
     .galeria{
         article{
-            width: 800px;
+            width: 700px;
         }
     }
     .lubri-servi{
@@ -54,8 +51,7 @@
             width: 480px;
             margin: 5px;
             .img-servicios{
-                width: 200px;
-                height: 200px;
+                @include sizes (200px, 200px);
                 object-fit: cover;
                 margin: 5px; 
                 padding: 5px;
@@ -71,28 +67,22 @@
             }
         }
     } 
+    .para-somos{
+        font-size: 24px;
+        text-decoration: solid;
+    }
     .galeria-1{
-        display: grid;
         background-color: rgb(151, 148, 148);
+        @extend %galerias;
         width: 750px;
-        box-shadow: 1px 1px 7px 2px #000000;
-        margin: 40px auto;
-        border-radius: 5px;
-        padding: 20px;
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "h3 h3 h3" 
                              "img1 img2 img3" 
                              "img4 img5 img6" 
                              "img7 img8 img9";
         .img-quien{
-            display: flex;
-            width: 200px;
-            height: 200px;
-            object-fit: contain;
-            margin: 7px;   
-            align-items: center;
-            justify-content: center;
+            @extend %galeria-img;
+            @include sizes (200px, 200px);
         }
         .h3-quien{
             grid-area: h3;
@@ -124,6 +114,26 @@
             grid-area: img9;
         }
     }
+    .galeria-2{
+        background-color: rgb(252, 60, 60);
+        @extend %galerias;
+        width: 500px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "h3 h3" 
+                             "img1 img2" 
+                             "img3 img4" 
+                             "img5 img6";
+        .img-galeria{
+            @extend %galeria-img;
+            @include sizes (200px, 200px);
+        }
+        .h3-galeria{
+            grid-area: h3;
+            color: black;
+            padding: 10px;
+        }
+
+    }    
     .formulario {
         width: 700px;
         background-color: white;
@@ -192,14 +202,17 @@
                 justify-content: center;
                 align-items: center;
                 width: 300px;
-            }
-                           
+            }                           
         }  
         .galeria{
             article{
                 width: 80%;
             }
-        }  
+        } 
+        iframe{
+            @include sizes (350px, 290px);
+            margin: 2rem;
+        } 
     }
 }
 @media(max-width:768px){
@@ -218,8 +231,7 @@
             justify-content: center;
             align-items: center;
             .img-inicio{
-                width: 280px;
-                height: 280px;
+                @include sizes (280px, 280px);
                 margin: 5px;
                 object-fit: cover;
             }
@@ -266,8 +278,7 @@
                                  "img7 img8"
                                  "img9 img9";
             .img-quien{
-                width: 140px;
-                height: 140px;
+                @include sizes (140px, 140px);
                 margin:5px;
             }                                            
         }  
@@ -278,8 +289,7 @@
             flex-direction: column;
         }
         iframe{
-            width: 95%;
-            height: 95%;
+            margin: 1rem;
         }
         .formulario{
             width: auto;
@@ -293,6 +303,17 @@
                                  "asunto" 
                                  "mensaje" 
                                  "boton";
+        }
+    }
+}
+@media(max-width:576px){
+    .cuerpo{
+        .galeria-2{
+            width: 300px;
+            margin: 0;
+            .img-galeria{
+                @include sizes (120px, 120px)
+            }
         }
     }
 }
@@ -313,20 +334,18 @@
                 width: 95%;
             }
         }
+        .para-somos{
+            font-size: 20px;
+            text-decoration: solid;
+        }
         .galeria-1{
             margin: 0;
-            grid-template-columns: 1fr;
-            grid-template-areas: "h3"
-                                 "img1" 
-                                 "img2"
-                                 "img3"
-                                 "img4"
-                                 "img5"
-                                 "img6"
-                                 "img7"
-                                 "img8"
-                                 "img9";
+            .img-quien{
+                @include sizes (120px, 120px)
+            }
+        } 
+        iframe{
+            @include sizes (250px, 250px);
         }
-          
     }
 }
