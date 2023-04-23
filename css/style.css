@@ -269,7 +269,7 @@
   grid-area: img9;
 }
 .cuerpo .galeria-2 {
-  background-color: rgb(252, 60, 60);
+  background-color: rgb(253, 88, 88);
   width: 500px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "h3 h3" "img1 img2" "img3 img4" "img5 img6";
@@ -447,6 +447,9 @@
   }
   .cuerpo .galeria article {
     width: 95%;
+  }
+  .cuerpo .carrousel {
+    width: 90%;
   }
   .cuerpo .para-somos {
     font-size: 20px;
