@@ -430,12 +430,9 @@
 }
 @media (max-width: 576px) {
   .cuerpo .galeria-2 {
-    width: 300px;
-    margin: 0;
-  }
-  .cuerpo .galeria-2 .img-galeria {
-    width: 120px;
-    height: 120px;
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "h3" "img1" "img2" "img3" "img4" "img5" "img6";
   }
 }
 @media (max-width: 480px) {
@@ -446,10 +443,7 @@
     width: 300px;
   }
   .cuerpo .galeria article {
-    width: 90%;
-  }
-  .cuerpo .galeria .galeria-2 {
-    width: 90%;
+    width: 300px;
   }
   .cuerpo .para-somos {
     font-size: 20px;

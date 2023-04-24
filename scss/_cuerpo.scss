@@ -309,14 +309,19 @@
 @media(max-width:576px){
     .cuerpo{
         .galeria-2{
-            width: 300px;
-            margin: 0;
-            .img-galeria{
-                @include sizes (120px, 120px)
-            }
+            width: 90%;
+            grid-template-columns: 1fr;
+            grid-template-areas: "h3" 
+                                 "img1"
+                                 "img2" 
+                                 "img3"
+                                 "img4" 
+                                 "img5"
+                                 "img6";
         }
     }
 }
+
 
 @media(max-width:480px){
     .cuerpo{
@@ -331,10 +336,7 @@
         }
         .galeria{
             article{
-                width: 90%;
-            }
-            .galeria-2{
-                width: 90%;
+                width: 300px;
             }
         }
         .para-somos{
